@@ -1,0 +1,32 @@
+@import "_variables";
+@import "_mixins";
+
+a {
+  margin-bottom: 10px;
+  &:nth-child(odd) {
+    @include link("odd");
+  }
+  &:nth-child(even) {
+    @include link("even");
+  }
+}
+
+h1 {
+  @include sexyTitle();
+}
+
+.box {
+  color: blue;
+  h2 {
+    color: $bg;
+  }
+  button {
+    color: red;
+    &:hover {
+      color: orange;
+    }
+  }
+  &:hover {
+    background-color: green;
+  }
+}
